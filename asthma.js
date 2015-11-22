@@ -26,5 +26,5 @@ if(window.divAsthma){
         asthmaFeel.innerHTML='<span style="color:red;font-size:x-large">Ooops!<br>Can we add that to your <button>Log book</button>? You may need help to manage this asthma crisis. I see that you previously saved the <a href="#">contact information for your Pediatrician</a>. Asthma crisis should be taken seriously as this <a href="#">CDC video explains</a>. You may also want to ...</span>'
         4
     }
-    $("<hr>Your Log<hr>Reference Information ... more later<hr>").appendTo(divAsthma)
+    $("<hr>Your Log<hr>Reference Information(More information coming soon)<hr>").appendTo(divAsthma)
 }
