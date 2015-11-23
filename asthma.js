@@ -2,7 +2,7 @@ console.log('asthma.js loaded')
 
 
 if(window.divAsthma){
-    $('<h1 style="color:white;background-color:black;line-height:60px" id="asthmaLogHead">&nbsp;Your Asthma Log Book <a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma)
+    $('<h1 style="color:white;background-color:black;line-height:60px" id="asthmaLogHead">&nbsp;My Asthma Action Plan <a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma)
     $("<h3>How's Asthma treating you today?</h3>").appendTo(divAsthma)
     $('<table><tr><td style="vertical-align:top"><form><p><i class="fa fa-heart fa-5x" style="color:green" id="asthmaheart"></i></p><p><i class="fa fa-heart-o fa-5x" style="color:orange" id="asthmahearto"></i></p><p><i class="fa fa-heartbeat fa-5x" style="color:red" id="asthmaheartb"></i></p></form></td><td id="asthmaFeel" style="vertical-align:top"></td></tr></table>').appendTo(divAsthma)
     asthmaheart.onclick=function(){
