@@ -17,11 +17,20 @@ asthmaActionPlan=function(div){ // ini
     asthmaActionPlan.div.innerHTML='<button class="btn btn-primary" onclick="asthmaActionPlan.onclick(\'create\')">Create a new plan</button>, <button class="btn btn-primary" onclick="asthmaActionPlan.onclick(\'load\')">Load a local plan</button> or <button class="btn btn-primary" onclick="asthmaActionPlan.onclick(\'import\')">Import an external plan</button>.'
 }
 
+//asthmaActionPlan.localStorage=localStorage.asthmaActionPlan
+if(!localStorage.asthmaActionPlan){
+    asthmaActionPlan.localStorage={}
+}else{
+    asthmaActionPlan.localStorage=JSON.parse(localStorage.asthmaActionPlan)
+}
+
 asthmaActionPlan.onclick=function(fun){
     asthmaActionPlan[fun]()
 }
 asthmaActionPlan.create=function(){ // create a new plan
     console.log('creating a new plan')
+    asthmaActionPlan.localStorage.role='create'
+    localStorage.asthmaActionPlan=JSON.stringify(asthmaActionPlan.localStorage)
     // start with the header
     var h = '<table><tr>'
     h+='<td style="vertical-align:top;padding:10px"><b style:>My Asthma Action Plan</b></td>'
@@ -51,7 +60,7 @@ asthmaActionPlan.load=function(){
 
 
 asthmaActionPlan.header = function(){ // check header information
-    if(!localStorage.asthmaActionPlan_header){ // create asthma action plan
+    if(!asthmaActionPlan.localStorage.head){ // create asthma action plan
 
 
     }
