@@ -53,12 +53,12 @@ asthmaActionPlan.create=function(){ // create a new plan
             h+='<table style="border: 1px solid black;width:100%">'
                 h+='<tr><td style="border: 1px solid black">My Best Peak Flow: 550 </td><td style="background-color:green;border: 1px solid black"> GREEN ZONE: DOING WELL</td></tr>'
                 h+='<tr>'
-                    h+='<td><table><tr><td style="vertical-align:top;padding:10px;border: 1px solid black;background-color:green">Peak flow more than <u>440</u> (greater than 80% of best)</td><td style="vertical-align:top;padding:10px;border: 1px solid black"><li>Breathing is good</li><li>No Cough or Wheeze</li><li>Can run and play normaly</li></td></tr></table></td>'
-                    h+='<td style="vertical-align:top;padding:10px;border: 1px solid black"><i>Controler Medication(s):</i><div id="controlerMedications"></div></td>'
+                    h+='<td><table><tr><td style="vertical-align:top;padding:10px;border: 1px solid black;background-color:green;width:20%">Peak flow more than <u>440</u> (greater than 80% of best)</td><td style="vertical-align:top;padding:10px;border: 1px solid black;width:20%"><li>Breathing is good</li><li>No Cough or Wheeze</li><li>Can run and play normaly</li></td></tr></table></td>'
+                    h+='<td style="vertical-align:top;padding:10px;border: 1px solid black"><i>Controler Medication(s):</i><div id="greenMedications"></div></td>'
                 h+='</tr>'
                 h+='<tr>'
-                    h+='<td style="border: 1px solid black">Use this medication 20 minutes before physical activity</td>'
-                    h+='<td style="border: 1px solid black"><div id="controlerMedications20mins"></div></td>'
+                    h+='<td style="border: 1px solid black">Use this medication 20 minutes before physical activity:</td>'
+                    h+='<td style="border: 1px solid black;padding:10px"><div id="greenMedications20mins"></div></td>'
                 h+='</tr>'
             h+='</table>'
         h+='</td></tr>'
@@ -68,7 +68,8 @@ asthmaActionPlan.create=function(){ // create a new plan
     setInterval(function(){
         asthmaActionPlan_printedOn.textContent=new Date()
     },1000)
-    
+    asthmaActionPlan.medication(greenMedications)
+    asthmaActionPlan.medication(greenMedications20mins)
 }
 asthmaActionPlan.import=function(){
     console.log('import')
@@ -77,6 +78,69 @@ asthmaActionPlan.import=function(){
 asthmaActionPlan.load=function(){
     console.log('load')
     4
+}
+
+asthmaActionPlan.medication=function(div){ // create table for filling medication
+    div.innerHTML='<table><tr><td style="padding:10px"><b><u>Medicine</u></b></td><td style="padding:10px"><b><u>How_Much_to_Take</u></b></td><td style="padding:10px"><b><u>How_Often</u></b></td><td></td></tr></table> <button>Add medicine<button>'
+    // add medication
+    var medicine = {
+        'Symbicort (budesonide/formoterol)':{
+            '1 inhalation, MOI with Spacer':[
+                'Once Daily',
+                'Twice Daily'],
+            '2 inhalations, MOI with Spacer':[
+                'Once Daily',
+                'Twice Daily']
+        },
+        'Flonase (fluticasone nasal), 1 spray':{
+            '1 Squirt each nostril':[
+                'Once Daily',
+                'Twice Daily'],
+            '1 Squirt each nostril':[
+                'Once Daily',
+                'Twice Daily']
+        },
+        'Claritin 10 mg':{
+            '1 Tablet, By Mouth':[
+                'Once Daily',
+                'Twice Daily'],
+            '2 Tablets, By Mouth':[
+                'Once Daily']
+        }
+    }
+
+    $('button',div)[0].onclick=function(evt){
+        var bt = this
+        bt.hidden=true // hide the butto that was just pressed
+        var sl1 = document.createElement('select')
+        var op = document.createElement('option')
+        op.value=op.textContent='select Medicine:'
+        sl1.appendChild(op)
+        Object.getOwnPropertyNames(medicine).forEach(function(p){
+            var op = document.createElement('option')
+            op.value=op.textContent=p
+            sl1.appendChild(op)        
+        })
+        div.appendChild(sl1)
+        sl1.onchange=function(){
+            var tb = $('table',div.parentElement)[0]
+            var tr = document.createElement('tr')
+            tb.tBodies[0].appendChild(tr)
+            var td = document.createElement('td')
+            td.textContent=sl1.selectedOptions[0].value
+            td.style.padding='10px'
+            tr.appendChild(td)
+            $(sl1).remove()
+            var sl2 = document.createElement('select')
+            var op = document.createElement('option')
+            op.value=op.textContent='select How Much to Take:'
+            sl2.appendChild(op)
+            div.appendChild(sl2)
+            4
+        }
+        4
+    }
+
 }
 
 
