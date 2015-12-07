@@ -136,6 +136,24 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
             op.value=op.textContent='select How Much to Take:'
             sl2.appendChild(op)
             div.appendChild(sl2)
+            Object.getOwnPropertyNames(medicine[sl1.selectedOptions[0].value]).forEach(function(p){
+                var op = document.createElement('option')
+                op.value=op.textContent=p
+                sl2.appendChild(op)
+            })
+            sl2.onchange=function(){
+                var td = document.createElement('td')
+                td.textContent=sl2.selectedOptions[0].value
+                td.style.padding='10px'
+                tr.appendChild(td)
+                $(sl2).remove()
+                var sl3 = document.createElement('select')
+                var op = document.createElement('option')
+                op.value=op.textContent='select How Often:'
+                sl3.appendChild(op)
+                div.appendChild(sl3)
+                4
+            }
             4
         }
         4

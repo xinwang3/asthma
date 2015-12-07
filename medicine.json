@@ -1,0 +1,25 @@
+{
+    'Symbicort (budesonide/formoterol)':{
+        '1 inhalation, MOI with Spacer':[
+            'Once Daily',
+            'Twice Daily'],
+        '2 inhalations, MOI with Spacer':[
+            'Once Daily',
+            'Twice Daily']
+    },
+    'Flonase (fluticasone nasal), 1 spray':{
+        '1 Squirt each nostril':[
+            'Once Daily',
+            'Twice Daily'],
+        '1 Squirt each nostril':[
+            'Once Daily',
+            'Twice Daily']
+    },
+    'Claritin 10 mg':{
+        '1 Tablet, By Mouth':[
+            'Once Daily',
+            'Twice Daily'],
+        '2 Tablets, By Mouth':[
+            'Once Daily']
+    }
+}
