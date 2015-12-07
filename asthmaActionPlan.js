@@ -57,12 +57,24 @@ asthmaActionPlan.create=function(){ // create a new plan
                     h+='<td style="vertical-align:top;padding:10px;border: 1px solid black"><i>Controler Medication(s):</i><div id="greenMedications"></div></td>'
                 h+='</tr>'
                 h+='<tr>'
-                    h+='<td style="border: 1px solid black">Use this medication 20 minutes before physical activity:</td>'
+                    h+='<td style="border: 1px solid black" width=40%>Use this medication 20 minutes before physical activity:</td>'
                     h+='<td style="border: 1px solid black;padding:10px"><div id="greenMedications20mins"></div></td>'
                 h+='</tr>'
             h+='</table>'
         h+='</td></tr>'
         h+='<tr><td style="border: 1px solid black;background-color:yellow;text-align:center">YELLOW ZONE: CAUTION</td></tr>'
+        h+='<tr><td>'
+            h+='<table><tr>'
+                h+='<td style="background-color:yellow;border: 1px solid black" width=20%>Peak flow: <u>275</u> to <u>440</u> (50%-80% of best)</td>'
+                h+='<td  style="border: 1px solid black;padding:10px" width=20%>'
+                    h+='<li><u>Signs of a cold</u></li>'
+                    h+='<li>Cough or wheezing</li>'
+                    h+='<li>Tight of chest</li>'
+                    h+='<li>Waking up at night because of asthma</li>'
+                h+='</td>'
+                h+='<td style="vertical-align:top;padding:10px;border: 1px solid black"><i>Continue with GREEN ZONE medications (above)</i><div id="yellowMedications"></div></td>'
+            h+='</tr></table>'
+        h+='</td></tr>'
     h+='</table>'
     asthmaActionPlan.div.innerHTML=h
     setInterval(function(){
@@ -70,6 +82,7 @@ asthmaActionPlan.create=function(){ // create a new plan
     },1000)
     asthmaActionPlan.medication(greenMedications)
     asthmaActionPlan.medication(greenMedications20mins)
+    asthmaActionPlan.medication(yellowMedications)
 }
 asthmaActionPlan.import=function(){
     console.log('import')
