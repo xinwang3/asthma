@@ -106,6 +106,13 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
                 'Twice Daily'],
             '2 Tablets, By Mouth':[
                 'Once Daily']
+        },
+        'Claritin 20 mg':{
+            '1 Tablet, By Mouth':[
+                'Once Daily',
+               ],
+            '2 Tablets, By Mouth':[
+                'Once Daily']
         }
     }
 
@@ -128,7 +135,7 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
             tb.tBodies[0].appendChild(tr)
             var td = document.createElement('td')
             td.textContent=sl1.selectedOptions[0].value
-            td.style.padding='10px'
+            td.style.padding='10px';td.style.color='blue'
             tr.appendChild(td)
             $(sl1).remove()
             var sl2 = document.createElement('select')
@@ -144,7 +151,7 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
             sl2.onchange=function(){
                 var td = document.createElement('td')
                 td.textContent=sl2.selectedOptions[0].value
-                td.style.padding='10px'
+                td.style.padding='10px';td.style.color='blue'
                 tr.appendChild(td)
                 $(sl2).remove()
                 var sl3 = document.createElement('select')
@@ -152,6 +159,19 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
                 op.value=op.textContent='select How Often:'
                 sl3.appendChild(op)
                 div.appendChild(sl3)
+                medicine[sl1.selectedOptions[0].value][sl2.selectedOptions[0].value].forEach(function(p){
+                    var op = document.createElement('option')
+                    op.value=op.textContent=p
+                    sl3.appendChild(op)
+                })
+                sl3.onchange=function(){
+                    var td = document.createElement('td')
+                    td.textContent=sl3.selectedOptions[0].value
+                    td.style.padding='10px';td.style.color='blue';td.style.color='blue'
+                    tr.appendChild(td)
+                    $(sl3).remove()
+                    $('button',div)[0].hidden=false
+                }
                 4
             }
             4
