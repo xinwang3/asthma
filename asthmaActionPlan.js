@@ -40,7 +40,7 @@ asthmaActionPlan.create=function(){ // create a new plan
     h+='<td style="vertical-align:top;padding:10px"><b style:>My Asthma Action Plan</b></td>'
     h+='<td style="vertical-align:top">'
         h+='<table>'
-            h+='<tr><td>Name: <input type="text"  class="form-control" id="asthmaActionPlan_name"></td></tr>'
+            h+='<tr><td>Name: <input type="text"  id="asthmaActionPlan_name"></td></tr>'
             h+='<tr><td>Printed on: <span style="color:blue;font-size:small" id="asthmaActionPlan_printedOn">'+new Date()+'</span></td></tr>'
             h+='<tr><td>Created on: <span style="color:navy;font-size:small">'+new Date()+'</span></td></tr>'
         h+='</table>'
@@ -51,7 +51,7 @@ asthmaActionPlan.create=function(){ // create a new plan
         h+='<tr><td><b>Asthma Triggers:</b> Colds or Infections, Exercise, Weather, Outdoor Allergies, Animal Allergies, Dust.</td></tr>'
         h+='<tr><td>'
             h+='<table style="border: 1px solid black;width:100%">'
-                h+='<tr><td style="border: 1px solid black">My Best Peak Flow: 550 </td><td style="background-color:green;color:white;padding:10px;border: 1px solid black"> GREEN ZONE: DOING WELL</td></tr>'
+                h+='<tr><td style="border: 1px solid black">My Best Peak Flow: <input value="550" size=5> </td><td style="background-color:green;color:white;padding:10px;border: 1px solid black"> GREEN ZONE: DOING WELL</td></tr>'
                 h+='<tr>'
                     h+='<td><table><tr><td style="vertical-align:top;padding:10px;border: 1px solid black;background-color:green;color:white;width:20%">Peak flow more than <u>440</u> (greater than 80% of best)</td><td style="vertical-align:top;padding:10px;border: 1px solid black;width:20%"><li>Breathing is good</li><li>No Cough or Wheeze</li><li>Can run and play normaly</li></td></tr></table></td>'
                     h+='<td style="vertical-align:top;padding:10px;border: 1px solid black"><i>Controler Medication(s):</i><div id="greenMedications"></div></td>'
@@ -83,38 +83,9 @@ asthmaActionPlan.load=function(){
 asthmaActionPlan.medication=function(div){ // create table for filling medication
     div.innerHTML='<table><tr><td style="padding:10px"><b><u>Medicine</u></b></td><td style="padding:10px"><b><u>How_Much_to_Take</u></b></td><td style="padding:10px"><b><u>How_Often</u></b></td><td></td></tr></table> <button>Add medicine<button>'
     // add medication
-    var medicine = {
-        'Symbicort (budesonide/formoterol)':{
-            '1 inhalation, MOI with Spacer':[
-                'Once Daily',
-                'Twice Daily'],
-            '2 inhalations, MOI with Spacer':[
-                'Once Daily',
-                'Twice Daily']
-        },
-        'Flonase (fluticasone nasal), 1 spray':{
-            '1 Squirt each nostril':[
-                'Once Daily',
-                'Twice Daily'],
-            '1 Squirt each nostril':[
-                'Once Daily',
-                'Twice Daily']
-        },
-        'Claritin 10 mg':{
-            '1 Tablet, By Mouth':[
-                'Once Daily',
-                'Twice Daily'],
-            '2 Tablets, By Mouth':[
-                'Once Daily']
-        },
-        'Claritin 20 mg':{
-            '1 Tablet, By Mouth':[
-                'Once Daily',
-               ],
-            '2 Tablets, By Mouth':[
-                'Once Daily']
-        }
-    }
+    var medicine = {}
+    // get medicine data structure
+    $.getJSON('medicine.json').then(function(x){medicine=x})
 
     $('button',div)[0].onclick=function(evt){
         var bt = this
