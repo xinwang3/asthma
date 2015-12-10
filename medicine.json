@@ -4,10 +4,7 @@
       "Once Daily",
       "Twice Daily"
     ],
-    "2 inhalations, NOT with Spacer": [
-      "Once Daily",
-      "Twice Daily"
-    ]
+    "2 inhalations, NOT with Spacer": "day12.json"
   },
   "Flonase (fluticasone nasal), 1 spray": {
     "1 Squirt each nostril": [
