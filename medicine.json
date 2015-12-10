@@ -7,10 +7,7 @@
     "2 inhalations, NOT with Spacer": "day12.json"
   },
   "Flonase (fluticasone nasal), 1 spray": {
-    "1 Squirt each nostril": [
-      "Once Daily",
-      "Twice Daily"
-    ]
+    "1 Squirt each nostril": "day12.json"
   },
   "Claritin 10 mg": {
     "1 Tablet, By Ear": [
