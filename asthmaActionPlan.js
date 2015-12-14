@@ -149,11 +149,14 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
         var op = document.createElement('option')
         op.value=op.textContent='select Medicine:'
         sl1.appendChild(op)
-        Object.getOwnPropertyNames(asthmaActionPlan.medicine).forEach(function(p){
+        for( var p in asthmaActionPlan.medicine){
             var op = document.createElement('option')
             op.value=op.textContent=p
-            sl1.appendChild(op)        
-        })
+            sl1.appendChild(op)  
+        }
+        //Object.getOwnPropertyNames(asthmaActionPlan.medicine).forEach(function(p){
+                  
+        //})
         div.appendChild(sl1)
         sl1.onchange=function(){
             var tb = $('table',div.parentElement)[0]
