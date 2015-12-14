@@ -19,6 +19,7 @@ asthmaActionPlan=function(div){ // ini
     if(location.hash.length>0){
         asthmaActionPlan.onclick(location.hash.slice(1))
     }
+    asthmaActionPlan.getMedicine() // reads json files with medicine info
 }
 
 //asthmaActionPlan.localStorage=localStorage.asthmaActionPlan
@@ -93,12 +94,53 @@ asthmaActionPlan.load=function(){
     4
 }
 
+asthmaActionPlan.medicine={}
+asthmaActionPlan.getMedicine=function(){
+    $.getJSON('medicine.json')
+     .then(function(x){
+        asthmaActionPlan.medicine=x
+        $.getJSON('Frequency_of_Doses.json')
+         .then(function(x){
+            var Frequency_of_Doses=x
+            $.getJSON('Usual_Doses.json')
+             .then(function(x){
+                 Frequency_of_Doses
+                 var Usual_Doses=x
+                 // create dosage array
+                 for (var d in Usual_Doses){
+                     Usual_Doses[d]=Frequency_of_Doses
+                 }
+                 for(var i in asthmaActionPlan.medicine){
+                     for(var j in asthmaActionPlan.medicine[i]){
+                        if(asthmaActionPlan.medicine[i][j]==="Usual_Doses.json"){
+                            asthmaActionPlan.medicine[i][j]=Usual_Doses
+                        } 
+                     }
+                 }
+                 // fix structure
+                 var new_medicine={}
+                 for(var i in asthmaActionPlan.medicine){
+                     for(var j in asthmaActionPlan.medicine[i]){
+                         new_medicine[i+' '+j]=asthmaActionPlan.medicine[i][j]
+                     }
+                 }
+                 asthmaActionPlan.medicine=new_medicine
+             })
+         })
+     })
+
+}
+
 asthmaActionPlan.medication=function(div){ // create table for filling medication
     div.innerHTML='<table><tr><td style="padding:10px"><b><u>Medicine</u></b></td><td style="padding:10px"><b><u>How_Much_to_Take</u></b></td><td style="padding:10px"><b><u>How_Often</u></b></td><td></td></tr></table> <button>Add medicine<button>'
     // add medication
-    var medicine = {}
+    //var medicine = {}
     // get medicine data structure
-    $.getJSON('medicine.json').then(function(x){medicine=x})
+    //$.getJSON('medicine.json').then(function(x){
+    //    medicine=x
+    //    // dereference dosages
+    //    4
+    //})
 
     $('button',div)[0].onclick=function(evt){
         var bt = this
@@ -107,7 +149,7 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
         var op = document.createElement('option')
         op.value=op.textContent='select Medicine:'
         sl1.appendChild(op)
-        Object.getOwnPropertyNames(medicine).forEach(function(p){
+        Object.getOwnPropertyNames(asthmaActionPlan.medicine).forEach(function(p){
             var op = document.createElement('option')
             op.value=op.textContent=p
             sl1.appendChild(op)        
@@ -127,7 +169,7 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
             op.value=op.textContent='select How Much to Take:'
             sl2.appendChild(op)
             div.appendChild(sl2)
-            Object.getOwnPropertyNames(medicine[sl1.selectedOptions[0].value]).forEach(function(p){
+            Object.getOwnPropertyNames(asthmaActionPlan.medicine[sl1.selectedOptions[0].value]).forEach(function(p){
                 var op = document.createElement('option')
                 op.value=op.textContent=p
                 sl2.appendChild(op)
@@ -143,7 +185,7 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
                 op.value=op.textContent='select How Often:'
                 sl3.appendChild(op)
                 div.appendChild(sl3)
-                medicine[sl1.selectedOptions[0].value][sl2.selectedOptions[0].value].forEach(function(p){
+                asthmaActionPlan.medicine[sl1.selectedOptions[0].value][sl2.selectedOptions[0].value].forEach(function(p){
                     var op = document.createElement('option')
                     op.value=op.textContent=p
                     sl3.appendChild(op)
