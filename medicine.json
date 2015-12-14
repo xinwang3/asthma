@@ -1,173 +1,173 @@
 
 {
   "Accnub (albuterol)": {
-   "1 Vial for Nebulizer0.63mg/3mL":"Usual_Doses.json”,
-   "2 Vial for Nebulizer1.25mg/3mL":"Usual_Doses.json”,
-   "3 Vial for Nebulizer2.5mg/3mL":"Usual_Doses.json”
+   "1 Vial for Nebulizer0.63mg/3mL":"Usual_Doses.json",
+   "2 Vial for Nebulizer1.25mg/3mL":"Usual_Doses.json",
+   "3 Vial for Nebulizer2.5mg/3mL":"Usual_Doses.json"
    },
    "Accolate (zafirlukast)": {
-     "1 Tablet10mg":"Usual_Doses.json”,
-     "2 Tablet20mg":"Usual_Doses.json”
+     "1 Tablet10mg":"Usual_Doses.json",
+     "2 Tablet20mg":"Usual_Doses.json"
    },
    "Advair Diskus (fluticasone/salmeterol)": {
-     "1 Inhaler100/50mcg":"Usual_Doses.json”,
-     "2 Inhaler250/50mcg":"Usual_Doses.json”,
-     "3 Inhaler500/50mcg":"Usual_Doses.json”
+     "1 Inhaler100/50mcg":"Usual_Doses.json",
+     "2 Inhaler250/50mcg":"Usual_Doses.json",
+     "3 Inhaler500/50mcg":"Usual_Doses.json"
    },
    "Advair HFA (fluticasone/salmeterol)": {
-     "1 Inhaler45/21mcg":"Usual_Doses.json”,
-     "2 Inhaler115/21mcg":"Usual_Doses.json”,
-     "3 Inhaler230/21mcg":"Usual_Doses.json”
+     "1 Inhaler45/21mcg":"Usual_Doses.json",
+     "2 Inhaler115/21mcg":"Usual_Doses.json",
+     "3 Inhaler230/21mcg":"Usual_Doses.json"
    },
-   "Aerobid (flunisolide)": {"Inhaler80mcg":"Usual_Doses.json”
+   "Aerobid (flunisolide)": {"Inhaler80mcg":"Usual_Doses.json"
    },
-   "Aerospan HFA (flunisolide)": {"Inhaler80mcg":"Usual_Doses.json”
+   "Aerospan HFA (flunisolide)": {"Inhaler80mcg":"Usual_Doses.json"
    },
    "Albuterol (Albuterol)": {
-     "1 Tablet2mg":"Usual_Doses.json”,
-     "2 Tablet4mg":"Usual_Doses.json”,
-     "3 Oral Syrup2mg/5mL":"Usual_Doses.json”
+     "1 Tablet2mg":"Usual_Doses.json",
+     "2 Tablet4mg":"Usual_Doses.json",
+     "3 Oral Syrup2mg/5mL":"Usual_Doses.json"
    },
    "Alvesco (ciclesonide)": {
-     "1 Inhaler80mcg":"Usual_Doses.json”,
-     "2 Inhaler160mcg":"Usual_Doses.json”
+     "1 Inhaler80mcg":"Usual_Doses.json",
+     "2 Inhaler160mcg":"Usual_Doses.json"
    },
    "Asmanex Twisthaler (mometasone furoate)": {
-     "1 Inhaler110mcg":"Usual_Doses.json”,
-     "2 Inhaler220mcg":"Usual_Doses.json”
+     "1 Inhaler110mcg":"Usual_Doses.json",
+     "2 Inhaler220mcg":"Usual_Doses.json"
    },
-   "Atrovent HFA (ipratropium)": {"Inhaler17mcg":"Usual_Doses.json”
+   "Atrovent HFA (ipratropium)": {"Inhaler17mcg":"Usual_Doses.json"
    },
-   "Breo Ellipta (fluticasone/vilanterol)": {"Inhaler100/25mcg":"Usual_Doses.json”
+   "Breo Ellipta (fluticasone/vilanterol)": {"Inhaler100/25mcg":"Usual_Doses.json"
    },
-   "Combivent Respimat (ipratropium/albuterol)": {"Inhaler20/100mcg":"Usual_Doses.json”
+   "Combivent Respimat (ipratropium/albuterol)": {"Inhaler20/100mcg":"Usual_Doses.json"
    },
    "Decadron (dexamethasone)": {
-     "1 Tablet0.5mg":"Usual_Doses.json”,
-     "2 Tablet0.75mg":"Usual_Doses.json”,
-     "3 Tablet1mg":"Usual_Doses.json”,
-     "4 Tablet1.5mg":"Usual_Doses.json”,
-     "5 Tablet2mg":"Usual_Doses.json”,
-     "6 Tablet4mg":"Usual_Doses.json”,
-     "7 Tablet6mg":"Usual_Doses.json”,
-     "8 Oral Solution1mg/mL":"Usual_Doses.json”,
-     "9 Injectable Solution4mg/mL":"Usual_Doses.json”,
-     "10 Injectable Solution10mg/mL":"Usual_Doses.json”
+     "1 Tablet0.5mg":"Usual_Doses.json",
+     "2 Tablet0.75mg":"Usual_Doses.json",
+     "3 Tablet1mg":"Usual_Doses.json",
+     "4 Tablet1.5mg":"Usual_Doses.json",
+     "5 Tablet2mg":"Usual_Doses.json",
+     "6 Tablet4mg":"Usual_Doses.json",
+     "7 Tablet6mg":"Usual_Doses.json",
+     "8 Oral Solution1mg/mL":"Usual_Doses.json",
+     "9 Injectable Solution4mg/mL":"Usual_Doses.json",
+     "10 Injectable Solution10mg/mL":"Usual_Doses.json"
    },
 
    "Dulera (mometasone/fomoterol)": {
-     "1 Inhaler100/5mcg":"Usual_Doses.json”,
-     "2 Inhaler200/5mcg":"Usual_Doses.json”
+     "1 Inhaler100/5mcg":"Usual_Doses.json",
+     "2 Inhaler200/5mcg":"Usual_Doses.json"
    },
 
-   "Duoneb (ipratropium/albuterol)": {"Vial for Nebulizer0.5/2.5mg/3mL":"Usual_Doses.json”
+   "Duoneb (ipratropium/albuterol)": {"Vial for Nebulizer0.5/2.5mg/3mL":"Usual_Doses.json"
    },
 
    "Flovent Diskus (fluticasone propionate)": {
-     "1 Inhaler50mcg":"Usual_Doses.json”,
-     "2 Inhaler100mcg":"Usual_Doses.json”,
-     "3 Inhaler250mcg":"Usual_Doses.json”
+     "1 Inhaler50mcg":"Usual_Doses.json",
+     "2 Inhaler100mcg":"Usual_Doses.json",
+     "3 Inhaler250mcg":"Usual_Doses.json"
    },
 
    "Flovent HFA (fluticasone propionate)": {
-     "1 Inhaler44mcg":"Usual_Doses.json”,
-     "2 Inhaler110mcg":"Usual_Doses.json”,
-     "3 Inhaler220mcg":"Usual_Doses.json”
+     "1 Inhaler44mcg":"Usual_Doses.json",
+     "2 Inhaler110mcg":"Usual_Doses.json",
+     "3 Inhaler220mcg":"Usual_Doses.json"
    },
 
-   "Foradil Aerolizer (formoterol)": {"Inhaler12mcg":"Usual_Doses.json”,
+   "Foradil Aerolizer (formoterol)": {"Inhaler12mcg":"Usual_Doses.json",
 
    "Medrol (methylprednisolone)": {
-     "1 Tablet2mg":"Usual_Doses.json”,
-     "2 Tablet4mg":"Usual_Doses.json”,
-     "3 Tablet8mg":"Usual_Doses.json”,
-     "4 Tablet16mg":"Usual_Doses.json”,
-     "5 Tablet32mg":"Usual_Doses.json”
+     "1 Tablet2mg":"Usual_Doses.json",
+     "2 Tablet4mg":"Usual_Doses.json",
+     "3 Tablet8mg":"Usual_Doses.json",
+     "4 Tablet16mg":"Usual_Doses.json",
+     "5 Tablet32mg":"Usual_Doses.json"
    },
 
-   "Orapred (prednisolone)": {"Oral Solution15mg/5mL":"Usual_Doses.json”
+   "Orapred (prednisolone)": {"Oral Solution15mg/5mL":"Usual_Doses.json"
    },
 
-   "Perforomist (formoterol)": {"Vial for Nebulizer20mcg/2mL":"Usual_Doses.json”
+   "Perforomist (formoterol)": {"Vial for Nebulizer20mcg/2mL":"Usual_Doses.json"
    },
 
    "Prednisone (prednisone)": {
-     "1 Tablet1mg":"Usual_Doses.json”,
-     "2 Tablet2.5mg":"Usual_Doses.json”,
-     "3 Tablet5mg":"Usual_Doses.json”,
-     "4 Tablet10mg":"Usual_Doses.json”,
-     "5 Tablet20mg":"Usual_Doses.json”,
-     "6 Tablet50mg":"Usual_Doses.json”
+     "1 Tablet1mg":"Usual_Doses.json",
+     "2 Tablet2.5mg":"Usual_Doses.json",
+     "3 Tablet5mg":"Usual_Doses.json",
+     "4 Tablet10mg":"Usual_Doses.json",
+     "5 Tablet20mg":"Usual_Doses.json",
+     "6 Tablet50mg":"Usual_Doses.json"
    },
 
-   "Prednisone Intensol (prednisone)": {"Oral Solution5mg/mL":"Usual_Doses.json”
+   "Prednisone Intensol (prednisone)": {"Oral Solution5mg/mL":"Usual_Doses.json"
    },
 
-   "Prelone (prednisolone)": {"Oral Solution15mg/5mL":"Usual_Doses.json”
+   "Prelone (prednisolone)": {"Oral Solution15mg/5mL":"Usual_Doses.json"
    },
 
-   "Proair (albuterol)": {"Inhaler90mcg":"Usual_Doses.json”
+   "Proair (albuterol)": {"Inhaler90mcg":"Usual_Doses.json"
    },
 
-   "Proventil (albuterol)": {"Inhaler90mcg":"Usual_Doses.json”
+   "Proventil (albuterol)": {"Inhaler90mcg":"Usual_Doses.json"
    },
 
    "Pulmicort Flexhaler (budesonide)": {
-     "1 Inhaler90mcg":"Usual_Doses.json”,
-     "2 Inhaler180mcg":"Usual_Doses.json”
+     "1 Inhaler90mcg":"Usual_Doses.json",
+     "2 Inhaler180mcg":"Usual_Doses.json"
    },
 
    "Pulmicort Respule (budesonide)": {
-     "1 Vial for Nebulizer0.25mg/2mL":"Usual_Doses.json”,
-     "2 Vial for Nebulizer0.5mg/2mL":"Usual_Doses.json”,
-     "3 Vial for Nebulizer1mg/2mL":"Usual_Doses.json”
+     "1 Vial for Nebulizer0.25mg/2mL":"Usual_Doses.json",
+     "2 Vial for Nebulizer0.5mg/2mL":"Usual_Doses.json",
+     "3 Vial for Nebulizer1mg/2mL":"Usual_Doses.json"
    },
 
    "Qvar (beclomethasone dipropionate)": {
-     "1 Inhaler40mcg":"Usual_Doses.json”,
-     "2 Inhaler80mcg":"Usual_Doses.json”
+     "1 Inhaler40mcg":"Usual_Doses.json",
+     "2 Inhaler80mcg":"Usual_Doses.json"
    },
 
-   "Serevent (salmeterol)": {"Inhaler50mcg":"Usual_Doses.json”
+   "Serevent (salmeterol)": {"Inhaler50mcg":"Usual_Doses.json"
    },
 
    "Singulair (montelukast)": {
-     "1 Tablet10mg":"Usual_Doses.json”,
-     "2 Chewable Tablet5mg":"Usual_Doses.json”,
-     "3 Chewable Tablet4mg":"Usual_Doses.json”,
-     "4 Powder4mg":"Usual_Doses.json”
+     "1 Tablet10mg":"Usual_Doses.json",
+     "2 Chewable Tablet5mg":"Usual_Doses.json",
+     "3 Chewable Tablet4mg":"Usual_Doses.json",
+     "4 Powder4mg":"Usual_Doses.json"
    },
 
    "Spiriva Handihaler (tiotropium)": {
-     "1 Inhaler18mcg":"Usual_Doses.json”,
-     "2 Inhaler1.25mcg":"Usual_Doses.json”,
-     "3 Inhaler2.5mcg":"Usual_Doses.json”
+     "1 Inhaler18mcg":"Usual_Doses.json",
+     "2 Inhaler1.25mcg":"Usual_Doses.json",
+     "3 Inhaler2.5mcg":"Usual_Doses.json"
    },
 
    "Symbicort (budesonide/formoterol)": {
-     "1 Inhaler80/4.5mcg":"Usual_Doses.json”,
-     "2 Inhaler160/4.5mcg":"Usual_Doses.json”
+     "1 Inhaler80/4.5mcg":"Usual_Doses.json",
+     "2 Inhaler160/4.5mcg":"Usual_Doses.json"
    },
 
    "Theo-24 (theophylline)": {
-     "1 Capsule100mg":"Usual_Doses.json”,
-     "2 Capsule200mg":"Usual_Doses.json”,
-     "3 Capsule300mg":"Usual_Doses.json”,
-     "4 Capsule400mg":"Usual_Doses.json”,
-     "5 Oral Solution80mg/15mL":"Usual_Doses.json”
+     "1 Capsule100mg":"Usual_Doses.json",
+     "2 Capsule200mg":"Usual_Doses.json",
+     "3 Capsule300mg":"Usual_Doses.json",
+     "4 Capsule400mg":"Usual_Doses.json",
+     "5 Oral Solution80mg/15mL":"Usual_Doses.json"
    },
-   "Ventolin (albuterol)": {"Inhaler90mcg":"Usual_Doses.json”
+   "Ventolin (albuterol)": {"Inhaler90mcg":"Usual_Doses.json"
    },
-   "Xolair (omalizumab)": {"Injection150mg":"Usual_Doses.json”
+   "Xolair (omalizumab)": {"Injection150mg":"Usual_Doses.json"
    },
    "Xopenex (levalbuterol)": {
-     "1 Vial for Nebulizer0.31mg/3mL":"Usual_Doses.json”,
-     "2 Vial for Nebulizer0.63mg/3mL":"Usual_Doses.json”,
-     "3 Vial for Nebulizer1.25mg/3mL":"Usual_Doses.json”,
-     "4 Inhaler45mcg":"Usual_Doses.json”
+     "1 Vial for Nebulizer0.31mg/3mL":"Usual_Doses.json",
+     "2 Vial for Nebulizer0.63mg/3mL":"Usual_Doses.json",
+     "3 Vial for Nebulizer1.25mg/3mL":"Usual_Doses.json",
+     "4 Inhaler45mcg":"Usual_Doses.json"
    },
    "Zyflo (zileuton)": {
-     "1 Tablet600mg":"Usual_Doses.json”,
-     "2 Tablet600mg":"Usual_Doses.json”
+     "1 Tablet600mg":"Usual_Doses.json",
+     "2 Tablet600mg":"Usual_Doses.json"
    },
  }
