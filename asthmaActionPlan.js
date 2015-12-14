@@ -76,6 +76,8 @@ asthmaActionPlan.create=function(){ // create a new plan
                 h+='<td style="vertical-align:top;padding:10px;border: 1px solid black"><i>Continue with GREEN ZONE medications (above)</i><div id="yellowMedications"></div></td>'
             h+='</tr></table>'
         h+='</td></tr>'
+        h+='<tr><td colspan=1 style="background-color:red;text-align:center">RED ZONE MEDICAL EMERGENCY</td></tr>'
+        h+='<tr><td>...</td></tr>'
     h+='</table>'
     asthmaActionPlan.div.innerHTML=h
     setInterval(function(){
