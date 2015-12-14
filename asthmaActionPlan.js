@@ -210,17 +210,16 @@ asthmaActionPlan.medication=function(div){ // create table for filling medicatio
         4
     }
 
-}
-
-
 asthmaActionPlan.header = function(){ // check header information
     if(!asthmaActionPlan.localStorage.head){ // create asthma action plan
 
 
     }
-    4
 }
 
+
+    47
+}
 
 
 $(document).ready(function(){
