@@ -1,4 +1,3 @@
-
 {
   "Accnub (albuterol)": {
    "1 Vial for Nebulizer0.63mg/3mL":"Usual_Doses.json",
@@ -75,7 +74,8 @@
      "3 Inhaler220mcg":"Usual_Doses.json"
    },
 
-   "Foradil Aerolizer (formoterol)": {"Inhaler12mcg":"Usual_Doses.json",
+   "Foradil Aerolizer (formoterol)": {"Inhaler12mcg":"Usual_Doses.json"
+   },
 
    "Medrol (methylprednisolone)": {
      "1 Tablet2mg":"Usual_Doses.json",
@@ -169,5 +169,5 @@
    "Zyflo (zileuton)": {
      "1 Tablet600mg":"Usual_Doses.json",
      "2 Tablet600mg":"Usual_Doses.json"
-   },
+   }
  }
