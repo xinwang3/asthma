@@ -26,15 +26,26 @@ if(window.divAsthma){
 
     };
 
+$(function() {
+    $("#uploadFile").on("change", function()
+    {
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
 
-    $("<hr>Upload Asthma Action Plan<input type='file' id='Upload'/><img id='myImg'src='#' alt='your image'/>").appendTo(divAsthma);
-    Upload.onclick=function(){
-      
-    };
+        if (/^image/.test( files[0].type)){ // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
 
+            reader.onloadend = function(){ // set image data as background of div
+                $("#imagePreview").css("background-image", "url("+this.result+")");
+            };
+        }
+    });
+});
 
+    $("<hr>Upload Youe Asthma Action Plan<hr>").appendTo(divAsthma);
+    $("<div id='imagePreview'></div>").appendTo(divAsthma);
+    $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
     $("<hr>SubmitYour Asthma Action Plan <button>Submit</button>").appendTo(divAsthma);
-
-
     $("<hr>Reference Information<hr>").appendTo(divAsthma);
 }
