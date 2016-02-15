@@ -1,5 +1,8 @@
 console.log('asthma.js loaded');
 
+if(appSpace){ // if this is being called as a sbmApp
+    appSpace.innerHTML='<div id="divAsthma"></div>'
+}
 
 if(window.divAsthma){
     $('<h1 style="color:white;background-color:black;line-height:60px" id="asthmaLogHead">&nbsp;Your Asthma Log Book <a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
