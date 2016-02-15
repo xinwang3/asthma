@@ -58,5 +58,5 @@ debugger
     $("<hr>Upload Youe Asthma Action Plan<hr>").appendTo(divAsthma);
     $("<div id='imagePreview'></div>").appendTo(divAsthma);
     $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
-    $("<hr>Reference Information<hr>").appendTo(divAsthma);
+    $("<span><hr>Reference Information</span>").appendTo(divAsthma);
 }
