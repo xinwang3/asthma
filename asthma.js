@@ -5,11 +5,14 @@ if(window.divAsthma){
     $('<h1 style="color:white;background-color:black;line-height:60px" id="asthmaLogHead">&nbsp;Your Asthma Log Book <a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
     $("<h3>How's Asthma treating you today?</h3>").appendTo(divAsthma);
     $('<table><tr><td style="vertical-align:top"><form><p><i class="fa fa-smile-o fa-5x" style="color:green" id="asthmaSmile"></i></p><p><i class="fa fa-meh-o fa-5x" style="color:orange" id="asthmaMeh"></i></p><p><i class="fa fa-frown-o fa-5x" style="color:red" id="asthmaFrown"></i></p></form></td><td id="asthmaFeel" style="vertical-align:top"></td></tr></table>').appendTo(divAsthma);
+
     asthmaSmile.onclick=function(){
+
         $(asthmaSmile).removeClass("fa-3x").addClass("fa-5x");
         $(asthmaMeh).removeClass("fa-5x").addClass("fa-4x");
         $(asthmaFrown).removeClass("fa-5x").addClass("fa-4x");
         asthmaFeel.innerHTML='<span style="color:green;font-size:x-large">Glad to hear that! My peak flow is more than 440<br>Can we add the good news to your <button>Log book</button>? <p>Based on your <a href="#">past entries</a>, we have compiled some information about Asthma to help you understand it better and keep it under control...</p></span>';
+
     };
     asthmaMeh.onclick=function(){
         $(asthmaSmile).removeClass("fa-5x").addClass("fa-4x");
@@ -38,6 +41,12 @@ $(function() {
 
             reader.onloadend = function(){ // set image data as background of div
                 $("#imagePreview").css("background-image", "url("+this.result+")");
+debugger
+                x = imagePreview.style.backgroundImage;
+                localStorage.setItem('myDataURL',x);
+                img = document.createElement('img');
+                document.body.appendChild(img);
+                img.src=localStorage.getItem('myDataURL').slice(5,-2);
             };
         }
     });
@@ -46,6 +55,5 @@ $(function() {
     $("<hr>Upload Youe Asthma Action Plan<hr>").appendTo(divAsthma);
     $("<div id='imagePreview'></div>").appendTo(divAsthma);
     $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
-    $("<hr>SubmitYour Asthma Action Plan <button>Submit</button>").appendTo(divAsthma);
     $("<hr>Reference Information<hr>").appendTo(divAsthma);
 }
