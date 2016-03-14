@@ -1,9 +1,5 @@
 console.log('asthma.js loaded');
 
-if(appSpace){ // if this is being called as a sbmApp
-    appSpace.innerHTML='<div id="divAsthma"></div>'
-}
-
 if(window.divAsthma){
     $('<h1 style="color:white;background-color:black;line-height:60px" id="asthmaLogHead">&nbsp;Your Asthma Log Book <a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
     $("<h3>How's Asthma treating you today?</h3>").appendTo(divAsthma);
@@ -44,7 +40,7 @@ $(function() {
 
             reader.onloadend = function(){ // set image data as background of div
                 $("#imagePreview").css("background-image", "url("+this.result+")");
-debugger
+
                 x = imagePreview.style.backgroundImage;
                 localStorage.setItem('myDataURL',x);
                 img = document.createElement('img');
@@ -55,8 +51,30 @@ debugger
     });
 });
 
+
     $("<hr>Upload Youe Asthma Action Plan<hr>").appendTo(divAsthma);
     $("<div id='imagePreview'></div>").appendTo(divAsthma);
     $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
-    $("<span><hr>Reference Information</span>").appendTo(divAsthma);
+    $("<hr>Reference Information<hr>").appendTo(divAsthma);
+    hello.on('auth.login', function(auth) {
+
+    // Call user information, for the given network
+    hello(auth.network).api('/me').then(function(r) {
+      // Inject it into the container
+      var label = document.getElementById('profile_' + auth.network);
+      if (!label) {
+        label = document.createElement('div');
+        label.id = 'profile_' + auth.network;
+        document.getElementById('profile').appendChild(label);
+      }
+      label.innerHTML = '<img src="' + r.thumbnail + '" /> Hey ' + r.name;
+    });
+    });
+
+        hello.init({
+        google: '305166684229-se0kd4a5ldgc2g1kbdf46giufacun7ld.apps.googleusercontent.com'
+        },
+
+        {redirect_uri: 'https://accounts.google.com/o/oauth2/token'});
+
 }
