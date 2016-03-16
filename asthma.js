@@ -1,8 +1,39 @@
 console.log('asthma.js loaded');
 
 if(window.divAsthma){
-    $('<h1 style="color:white;background-color:black;line-height:60px" id="asthmaLogHead">&nbsp;Your Asthma Log Book <a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
-    $("<h3>How's Asthma treating you today?</h3>").appendTo(divAsthma);
+    $('<h1 style="color:grey;background-color:pink;line-height:60px" id="asthmaLogHead">&nbsp;Stony Brook Children Hospital Asthma Action Plan<a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
+    $("<h3>Upload My Asthma Action Plan<h3>").appendTo(divAsthma);
+    $("<h4>What is the plan?<h4>").appendTo(divAsthma);
+    $("<div id='imagePreview'></div>").appendTo(divAsthma);
+    $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
+    $(function() {
+        $("#uploadFile").on("change", function()
+        {
+            var files = !!this.files ? this.files : [];
+            if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+            if (/^image/.test( files[0].type)){ // only image file
+                var reader = new FileReader(); // instance of the FileReader
+                reader.readAsDataURL(files[0]); // read the local file
+
+                reader.onloadend = function(){ // set image data as background of div
+                    $("#imagePreview").css("background-image", "url("+this.result+")");
+
+                    x = imagePreview.style.backgroundImage;
+                    localStorage.setItem('myDataURL',x);
+                    img = document.createElement('img');
+                    document.body.appendChild(img);
+                    img.src=localStorage.getItem('myDataURL').slice(5,-2);
+                };
+            }
+        });
+    });
+    $("<h3>How do you do it?</h3>").appendTo(divAsthma);
+
+
+    $("<h3>How is it going?</h3>").appendTo(divAsthma);
+
+
     $('<table><tr><td style="vertical-align:top"><form><p><i class="fa fa-smile-o fa-5x" style="color:green" id="asthmaSmile"></i></p><p><i class="fa fa-meh-o fa-5x" style="color:orange" id="asthmaMeh"></i></p><p><i class="fa fa-frown-o fa-5x" style="color:red" id="asthmaFrown"></i></p></form></td><td id="asthmaFeel" style="vertical-align:top"></td></tr></table>').appendTo(divAsthma);
 
     asthmaSmile.onclick=function(){
@@ -28,33 +59,6 @@ if(window.divAsthma){
 
     };
 
-$(function() {
-    $("#uploadFile").on("change", function()
-    {
-        var files = !!this.files ? this.files : [];
-        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
-
-        if (/^image/.test( files[0].type)){ // only image file
-            var reader = new FileReader(); // instance of the FileReader
-            reader.readAsDataURL(files[0]); // read the local file
-
-            reader.onloadend = function(){ // set image data as background of div
-                $("#imagePreview").css("background-image", "url("+this.result+")");
-
-                x = imagePreview.style.backgroundImage;
-                localStorage.setItem('myDataURL',x);
-                img = document.createElement('img');
-                document.body.appendChild(img);
-                img.src=localStorage.getItem('myDataURL').slice(5,-2);
-            };
-        }
-    });
-});
-
-
-    $("<hr>Upload Youe Asthma Action Plan<hr>").appendTo(divAsthma);
-    $("<div id='imagePreview'></div>").appendTo(divAsthma);
-    $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
     $("<hr>Reference Information<hr>").appendTo(divAsthma);
     hello.on('auth.login', function(auth) {
 
