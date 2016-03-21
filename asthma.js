@@ -79,6 +79,6 @@ if(window.divAsthma){
         google: '305166684229-se0kd4a5ldgc2g1kbdf46giufacun7ld.apps.googleusercontent.com'
         },
 
-        {redirect_uri: 'https://accounts.google.com/o/oauth2/token'});
+        {redirect_uri: 'http://sbu-bmi.github.io/asthma'});
 
 }
