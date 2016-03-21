@@ -1,7 +1,10 @@
 console.log('asthma.js loaded');
 
+
+if(location.href.match('sbu-it.github.io/apps')){appSpace.innerHTML='<div id="divAsthma"></div>'}
+
 if(window.divAsthma){
-    $('<h1 style="color:grey;background-color:pink;line-height:60px" id="asthmaLogHead">&nbsp;Stony Brook Children Hospital Asthma Action Plan<a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
+    $('<h1 style="color:grey;background-color:pink;line-height:60px" id="asthmaLogHead">&nbsp;My Asthma My Plan<a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
     $("<h3>Upload My Asthma Action Plan<h3>").appendTo(divAsthma);
     $("<h4>What is the plan?<h4>").appendTo(divAsthma);
     $("<div id='imagePreview'></div>").appendTo(divAsthma);
@@ -29,11 +32,7 @@ if(window.divAsthma){
         });
     });
     $("<h3>How do you do it?</h3>").appendTo(divAsthma);
-
-
     $("<h3>How is it going?</h3>").appendTo(divAsthma);
-
-
     $('<table><tr><td style="vertical-align:top"><form><p><i class="fa fa-smile-o fa-5x" style="color:green" id="asthmaSmile"></i></p><p><i class="fa fa-meh-o fa-5x" style="color:orange" id="asthmaMeh"></i></p><p><i class="fa fa-frown-o fa-5x" style="color:red" id="asthmaFrown"></i></p></form></td><td id="asthmaFeel" style="vertical-align:top"></td></tr></table>').appendTo(divAsthma);
 
     asthmaSmile.onclick=function(){
@@ -59,7 +58,7 @@ if(window.divAsthma){
 
     };
 
-    $("<hr>Reference Information<hr>").appendTo(divAsthma);
+    $("<span><hr>Reference Information<hr></span>").appendTo(divAsthma);
     hello.on('auth.login', function(auth) {
 
     // Call user information, for the given network
