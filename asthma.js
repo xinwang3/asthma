@@ -83,5 +83,6 @@ if(window.divAsthma){
 
         {redirect_uri: 'http://sbu-bmi.github.io/asthma'});
 
-}}
-});
+}
+}
+);
