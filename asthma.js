@@ -1,7 +1,7 @@
 console.log('asthma.js loaded');
 
 
-if(location.href.match('sbm-it.github.io/apps')){appSpace.innerHTML='<div id="divAsthma"></div>'}
+if(location.href.match('sbm-it.github.io/apps')){appSpace.innerHTML='<div id="divAsthma"></div>'};
 
 $.getScript('https://sbu-bmi.github.io/asthma/Hello.js',function(){
 
