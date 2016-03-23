@@ -4,7 +4,8 @@ console.log('asthma.js loaded');
 if(location.href.match('sbm-it.github.io/apps')){appSpace.innerHTML='<div id="divAsthma"></div>'}
 
 $.getScript('https://sbu-bmi.github.io/asthma/Hello.js',function(){
-
+$.getScript('app/asthma.js')
+sbmApps.linSstore();
 if(window.divAsthma){
     $('<button onclick="hello(\'google\').login()" style="color:black;background-color:yellow;line-height:20px">Log in My Asthma Action Plan</button>').appendTo(divAsthma);
     $('<h1 style="color:grey;background-color:pink;line-height:60px" id="asthmaLogHead">&nbsp;My Asthma My Plan<a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
@@ -83,5 +84,5 @@ if(window.divAsthma){
 
         {redirect_uri: 'http://sbu-bmi.github.io/asthma'});
 
-}
+}}
 });
