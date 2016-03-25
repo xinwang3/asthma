@@ -1,5 +1,6 @@
 console.log('asthma.js loaded');
 
+sbmApps.linkStore();
 
 if(location.href.match('sbm-it.github.io/apps')){appSpace.innerHTML='<div id="divAsthma"></div>'}
 
