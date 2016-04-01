@@ -1,0 +1,6 @@
+{
+    "name":"myAsthma",
+    "description":"myAthma alternative App",
+    "icon":"https://cdn2.iconfinder.com/data/icons/medical-specialties-1/256/Pulmonology-512.png",
+    "onclick":"https://sbu-bmi.github.io/asthma/myAsthma.html"
+}
