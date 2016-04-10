@@ -9,8 +9,10 @@ $.getScript('https://sbu-bmi.github.io/asthma/Hello.js',function(){
 if(window.divAsthma){
     $('<button onclick="hello(\'google\').login()" style="color:black;background-color:yellow;line-height:20px">Log in My Asthma Action Plan</button>').appendTo(divAsthma);
     $('<h1 style="color:grey;background-color:pink;line-height:60px" id="asthmaLogHead">&nbsp;My Asthma My Plan<a href="https://github.com/sbu-bmi/asthma/" target=_blank><i class="fa fa-github-alt"></i></a></h1>').appendTo(divAsthma);
-    $("<h3>Upload My Asthma Action Plan<h3>").appendTo(divAsthma);
-    $("<h4>What is the plan?<h4>").appendTo(divAsthma);
+    $("<h3>Welcome to MyAsthma MyPlan.  You have access to the plans of the children listed below.  Please click on the button to view the plan.<h3>").appendTo(divAsthma);
+    $("<h4>Harry Potter<h4>").appendTo(divAsthma);
+    $("<h4>Sponge Bob<h4>").appendTo(divAsthma);
+    $("<h4>Clark Kent <h4>").appendTo(divAsthma);
     $("<div id='imagePreview'></div>").appendTo(divAsthma);
     $("<input id='uploadFile' type='file' name='image' class='img' />").appendTo(divAsthma);
     $(function() {
@@ -35,32 +37,7 @@ if(window.divAsthma){
             }
         });
     });
-    $("<h3>How do you do it?</h3>").appendTo(divAsthma);
-    $("<h3>How is it going?</h3>").appendTo(divAsthma);
-    $('<table><tr><td style="vertical-align:top"><form><p><i class="fa fa-smile-o fa-5x" style="color:green" id="asthmaSmile"></i></p><p><i class="fa fa-meh-o fa-5x" style="color:orange" id="asthmaMeh"></i></p><p><i class="fa fa-frown-o fa-5x" style="color:red" id="asthmaFrown"></i></p></form></td><td id="asthmaFeel" style="vertical-align:top"></td></tr></table>').appendTo(divAsthma);
 
-    asthmaSmile.onclick=function(){
-
-        $(asthmaSmile).removeClass("fa-3x").addClass("fa-5x");
-        $(asthmaMeh).removeClass("fa-5x").addClass("fa-4x");
-        $(asthmaFrown).removeClass("fa-5x").addClass("fa-4x");
-        asthmaFeel.innerHTML='<span style="color:green;font-size:x-large">Glad to hear that! My peak flow is more than 440<br>Can we add the good news to your <button>Log book</button>? <p>Based on your <a href="#">past entries</a>, we have compiled some information about Asthma to help you understand it better and keep it under control...</p></span>';
-
-    };
-    asthmaMeh.onclick=function(){
-        $(asthmaSmile).removeClass("fa-5x").addClass("fa-4x");
-        $(asthmaMeh).removeClass("fa-4x").addClass("fa-5x");
-        $(asthmaFrown).removeClass("fa-5x").addClass("fa-4x");
-        asthmaFeel.innerHTML='<span style="color:orange;font-size:x-large">Sorry to hear that! My peak flow is between 275 to 440<br>Can we add that to your <button>Log book</button>? Based on your <a href="#">past entries</a>, we have compiled some information that may help.</span>';
-
-    };
-    asthmaFrown.onclick=function(){
-        $(asthmaSmile).removeClass("fa-5x").addClass("fa-4x");
-        $(asthmaMeh).removeClass("fa-5x").addClass("fa-4x");
-        $(asthmaFrown).removeClass("fa-4x").addClass("fa-5x");
-        asthmaFeel.innerHTML='<span style="color:red;font-size:x-large">Ooops! My peak flow is less than 275<br>Can we add that to your <button>Log book</button>? You may need help to manage this asthma crisis. I see that you previously saved the <a href="#">contact information for your Pediatrician</a>. Asthma crisis should be taken seriously as this <a href="#">CDC video explains</a>. You may also want to ...</span>';
-
-    };
 
     $("<span><hr>Reference Information<hr></span>").appendTo(divAsthma);
     hello.on('auth.login', function(auth) {

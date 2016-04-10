@@ -1,6 +1,6 @@
 #imagePreview {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-position: center center;
     background-size: cover;
     -webkit-box-shadow: 0 0 0px 0px rgba(0, 0, 0, .3);
