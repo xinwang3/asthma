@@ -1,6 +1,6 @@
 {
     "name":"myAsthma",
     "description":"myAthma alternative App",
-    "icon":"https://cdn2.iconfinder.com/data/icons/medical-specialties-1/256/Pulmonology-512.png",
-    "onclick":"https://sbu-bmi.github.io/asthma/myAsthma.html"
+    "icon":"https://static.ddmcdn.com/gif/lungs-reseeding-transplant-677034-.jpg",
+    "onclick":"http://localhost:8000/asthma/myAsthma.js"
 }
