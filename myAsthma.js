@@ -1,7 +1,7 @@
 console.log('loaded myAsthma.js :-)');
 
 (function(){
-    document.body.style.backgroundColor="yellow"
+    document.body.style.backgroundColor="white"
     var h ='</div>'
     h += '<h3 style="color:maroon">Welcome to your action plan</h3>'
     h += '<div style="color:blue" id="msg"> Start by loading an Action Plan:</div>'
